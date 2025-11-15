@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Equipo — Veldrion</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Conoce al equipo de Veldrion. Profesionales especializados en TI, redes empresariales y transformación digital." />
+    <style>
+      .team-page{
+        width:100%;
+        max-width:900px;
+        padding:48px 16px;
+      }
+      
+      .team-header{
+        text-align:center;
+        margin-bottom:48px;
+      }
+      
+      .team-logo{
+        width:64px;
+        height:64px;
+        margin:0 auto 16px;
+        display:block;
+        border-radius:14px;
+      }
+      
+      .team-title{
+        font-size:32px;
+        font-weight:600;
+        margin:0 0 12px;
+        letter-spacing:-0.02em;
+      }
+      
+      .team-subtitle{
+        font-size:16px;
+        color:var(--text-muted);
+        margin:0;
+      }
+      
+      .team-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+        gap:20px;
+        margin-bottom:48px;
+      }
+      
+      .team-card{
+        background:var(--bg-card);
+        border:1px solid var(--border);
+        border-radius:16px;
+        padding:24px;
+        text-decoration:none;
+        color:var(--text);
+        transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        position:relative;
+        overflow:hidden;
+      }
+      
+      .team-card::before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:linear-gradient(135deg, rgba(221,80,0,0.05), transparent);
+        opacity:0;
+        transition:opacity 0.2s;
+      }
+      
+      .team-card:hover{
+        transform:translateY(-4px);
+        border-color:rgba(221,80,0,0.3);
+        box-shadow:0 12px 32px rgba(0,0,0,0.3);
+      }
+      
+      .team-card:hover::before{
+        opacity:1;
+      }
+      
+      .team-card-avatar{
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        object-fit:cover;
+        border:3px solid var(--orange);
+        margin:0 auto 16px;
+        display:block;
+      }
+      
+      .team-card-name{
+        font-size:18px;
+        font-weight:600;
+        margin:0 0 6px;
+        text-align:center;
+      }
+      
+      .team-card-title{
+        font-size:14px;
+        color:var(--orange);
+        margin:0 0 12px;
+        text-align:center;
+      }
+      
+      .team-card-email{
+        font-size:13px;
+        color:var(--text-muted);
+        text-align:center;
+        margin:0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:6px;
+      }
+      
+      .team-footer{
+        text-align:center;
+        padding-top:32px;
+        border-top:1px solid var(--border);
+      }
+      
+      .team-footer-link{
+        display:inline-block;
+        padding:14px 28px;
+        background:var(--bg-card);
+        border:1px solid var(--border);
+        border-radius:10px;
+        text-decoration:none;
+        color:var(--text);
+        font-size:15px;
+        font-weight:500;
+        transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .team-footer-link:hover{
+        border-color:rgba(221,80,0,0.3);
+        background:rgba(221,80,0,0.05);
+        transform:translateY(-2px);
+      }
+      
+      @media (max-width:640px){
+        .team-grid{
+          grid-template-columns:1fr;
+        }
+        
+        .team-title{
+          font-size:26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="team-page">
+      <header class="team-header">
+        <img class="team-logo" src="assets/logo.svg" alt="Veldrion" />
+        <h1 class="team-title">Nuestro Equipo</h1>
+        <p class="team-subtitle">Profesionales especializados en TI y transformación digital</p>
+      </header>
+
+      <div class="team-grid">
+        <!-- Empleado 1 -->
+        <a href="team/carlos-martinez.html" class="team-card">
+          <img class="team-card-avatar" src="https://i.pravatar.cc/300?img=12" alt="Carlos Martínez" />
+          <h2 class="team-card-name">Carlos Martínez</h2>
+          <p class="team-card-title">Director de TI</p>
+          <p class="team-card-email">
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            carlos@veldrion.com
+          </p>
+        </a>
+
+        <!-- Empleado 2 -->
+        <a href="team/ana-rodriguez.html" class="team-card">
+          <img class="team-card-avatar" src="https://i.pravatar.cc/300?img=47" alt="Ana Rodríguez" />
+          <h2 class="team-card-name">Ana Rodríguez</h2>
+          <p class="team-card-title">Gerente de Proyectos</p>
+          <p class="team-card-email">
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            ana@veldrion.com
+          </p>
+        </a>
+
+        <!-- Placeholder para más empleados -->
+        <div class="team-card" style="opacity:0.5; pointer-events:none; text-align:center;">
+          <div style="width:80px; height:80px; border-radius:50%; background:var(--border); margin:0 auto 16px;"></div>
+          <h2 class="team-card-name">Próximamente</h2>
+          <p class="team-card-title">Nuevo miembro</p>
+          <p class="team-card-email">—</p>
+        </div>
+      </div>
+
+      <footer class="team-footer">
+        <a href="index.html" class="team-footer-link">← Volver a inicio</a>
+      </footer>
+    </div>
+  </body>
+</html>
