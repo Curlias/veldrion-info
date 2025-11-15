@@ -1,0 +1,6 @@
+# GitHub Pages no requiere Jekyll
+include:
+  - _config.yml
+  
+# Habilitar URLs limpias (sin .html)
+permalink: pretty

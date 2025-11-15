@@ -7,11 +7,12 @@ Sistema de perfiles digitales para empleados de Veldrion. Cada empleado tiene su
 ```
 veldrion-info/
 ├── index.html              # Página principal (enlaces Veldrion)
-├── equipo.html             # Índice del equipo
-├── team/                   # Perfiles individuales
-│   ├── carlos-martinez.html
-│   ├── ana-rodriguez.html
-│   └── [nuevo-empleado].html
+├── equipo/
+│   └── index.html          # Índice del equipo (URL: /equipo)
+├── carlosplata/
+│   └── index.html          # Perfil Carlos (URL: /carlosplata)
+├── anarodriguez/
+│   └── index.html          # Perfil Ana (URL: /anarodriguez)
 ├── shared/
 │   └── card.css           # CSS compartido para tarjetas
 ├── assets/
@@ -22,45 +23,38 @@ veldrion-info/
 
 ## 🆕 Cómo añadir un nuevo empleado
 
-### Paso 1: Copiar plantilla
-
-Duplica un archivo existente en la carpeta `team/`:
+### Paso 1: Crear carpeta con nombre de usuario
 
 ```bash
-cp team/carlos-martinez.html team/nombre-apellido.html
+mkdir nombreapellido
 ```
 
-### Paso 2: Editar el HTML
+**Importante:** El nombre de la carpeta será la URL. Usa minúsculas sin espacios.
+- Ejemplo: `carlosplata` → URL será `veld.info/carlosplata`
 
-Abre el archivo copiado y actualiza:
+### Paso 2: Copiar plantilla
+
+```bash
+cp carlosplata/index.html nombreapellido/index.html
+```
+
+### Paso 3: Editar el HTML
+
+Abre el archivo `nombreapellido/index.html` y actualiza:
 
 1. **`<title>`** - Cambia el nombre en el título
 2. **`<meta name="description">`** - Actualiza la descripción
-3. **Avatar** - Cambia la URL de la imagen:
-   ```html
-   <img class="card-avatar" src="https://i.pravatar.cc/300?img=XX" alt="Nombre" />
-   ```
-   O sube una foto a `assets/avatars/nombre.jpg` y usa:
-   ```html
-   <img class="card-avatar" src="../assets/avatars/nombre.jpg" alt="Nombre" />
-   ```
-4. **Nombre y título** - Actualiza:
-   ```html
-   <h1 class="card-name">Nombre Apellido</h1>
-   <p class="card-title">Cargo</p>
-   ```
-5. **Bio** - Escribe una descripción breve (2-3 líneas)
-6. **Email** - Cambia `email@veldrion.com`
-7. **Teléfono** - Actualiza el número
-8. **WhatsApp** - Cambia el número y mensaje
-9. **Redes sociales** - Actualiza URLs de LinkedIn, Twitter, GitHub, etc.
+3. **Avatar** - Cambia la URL de la imagen o sube a `/assets/avatars/nombre.jpg`
+4. **Nombre y título** - Actualiza nombre, cargo, bio
+5. **Email, teléfono, WhatsApp** - Cambia contactos
+6. **Redes sociales** - Actualiza URLs de LinkedIn, Twitter, etc.
 
-### Paso 3: Añadir al índice del equipo
+### Paso 4: Añadir al índice del equipo
 
-Abre `equipo.html` y añade una tarjeta nueva dentro de `<div class="team-grid">`:
+Abre `equipo/index.html` y añade una tarjeta nueva dentro de `<div class="team-grid">`:
 
 ```html
-<a href="team/nombre-apellido.html" class="team-card">
+<a href="/nombreapellido" class="team-card">
   <img class="team-card-avatar" src="https://i.pravatar.cc/300?img=XX" alt="Nombre Apellido" />
   <h2 class="team-card-name">Nombre Apellido</h2>
   <p class="team-card-title">Cargo</p>
@@ -72,6 +66,8 @@ Abre `equipo.html` y añade una tarjeta nueva dentro de `<div class="team-grid">
   </p>
 </a>
 ```
+
+**Importante:** El `href="/nombreapellido"` debe coincidir con el nombre de la carpeta.
 
 ### Paso 4: Subir a GitHub
 
@@ -103,14 +99,20 @@ Edita las variables CSS en `shared/card.css`:
 2. Recomendación: formato JPG o WebP, 400x400px, <200KB
 3. Actualiza la ruta en el HTML:
    ```html
-   <img class="card-avatar" src="../assets/avatars/nombre.jpg" alt="Nombre" />
+   <img class="card-avatar" src="/assets/avatars/nombre.jpg" alt="Nombre" />
    ```
 
 ## 🔗 URLs del sistema
 
-- **Página principal:** `https://curlias.github.io/veldrion-info/`
-- **Índice del equipo:** `https://curlias.github.io/veldrion-info/equipo.html`
-- **Perfil individual:** `https://curlias.github.io/veldrion-info/team/nombre-apellido.html`
+- **Página principal:** `https://veld.info/` (o GitHub Pages)
+- **Índice del equipo:** `https://veld.info/equipo`
+- **Perfil individual:** `https://veld.info/nombreapellido`
+
+### Ejemplos:
+- `https://veld.info/carlosplata` → Carlos Martínez
+- `https://veld.info/anarodriguez` → Ana Rodríguez
+
+**URLs limpias sin .html** - Cada carpeta con `index.html` se sirve automáticamente.
 
 ## 📱 Compartir tarjetas
 
