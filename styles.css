@@ -49,12 +49,16 @@ body{
   letter-spacing:-0.02em;
 }
 
+.brand-title .brand-veldrion,
 .brand-veldrion{
   color:#dd5000 !important;
+  text-decoration:none !important;
 }
 
+.brand-title .brand-com,
 .brand-com{
   color:#ffffff !important;
+  text-decoration:none !important;
 }
 
 .brand .tag{
