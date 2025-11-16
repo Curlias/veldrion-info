@@ -202,20 +202,24 @@ body{
 }
 
 .card-footer-brand-link{
-  text-decoration:none;
+  text-decoration:none !important;
   transition:opacity 0.2s;
   cursor:pointer;
+  border-bottom:none !important;
 }
 
 .card-footer-brand-link:hover{
   opacity:0.8;
-  text-decoration:none;
+  text-decoration:none !important;
+  border-bottom:none !important;
 }
 
 .card-footer-brand-link:visited,
 .card-footer-brand-link:active,
-.card-footer-brand-link:focus{
-  text-decoration:none;
+.card-footer-brand-link:focus,
+.card-footer-brand-link:link{
+  text-decoration:none !important;
+  border-bottom:none !important;
 }
 
 .card-footer-text .brand-veldrion{
