@@ -24,8 +24,9 @@ body{
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  padding:16px 16px 120px;
+  padding:8px 16px 120px;
   min-height:100vh;
+  overflow-y:auto;
   overflow-x:hidden;
 }
 
@@ -41,16 +42,24 @@ body{
   padding-top:8px;
 }
 
-.card-avatar{
+.card-avatar-wrapper{
   width:120px;
   height:120px;
   border-radius:50%;
-  object-fit:cover;
-  object-position:center 20%;
   border:4px solid #dd5000;
   margin:0 auto 16px;
   display:block;
   box-shadow:0 8px 24px rgba(221,80,0,0.4);
+  overflow:hidden;
+  position:relative;
+}
+
+.card-avatar{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 15%;
+  display:block;
 }
 
 .card-name{
@@ -182,19 +191,18 @@ body{
   border-top:1px solid var(--border);
 }
 
-.card-footer-logo{
-  width:64px;
-  height:64px;
-  margin:0 auto 16px;
-  display:block;
-  border-radius:10px;
-  opacity:1;
+.card-footer-text{
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:-0.01em;
 }
 
-.card-footer-text{
-  font-size:16px;
-  color:var(--text);
-  font-weight:600;
+.card-footer-text .brand-veldrion{
+  color:#dd5000;
+}
+
+.card-footer-text .brand-com{
+  color:#ffffff;
 }
 
 .card-footer-link{
