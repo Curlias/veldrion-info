@@ -1,4 +1,4 @@
-/* Tarjetas de perfil - v2.0 */
+/* Tarjetas de perfil - v3.0 */
 :root{
   --bg-dark:#0a0a0a;
   --bg-card:#161616;
@@ -243,38 +243,51 @@ body{
   display:inline-block;
   padding:14px 24px;
   background:var(--orange);
-  color:#fff;
-  text-decoration:none;
+  color:#fff !important;
+  text-decoration:none !important;
   border-radius:10px;
   font-weight:600;
   font-size:15px;
   transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border:1px solid var(--orange);
+  width:100%;
+  box-sizing:border-box;
 }
 
 .card-action:hover{
   background:var(--orange-hover);
   transform:translateY(-2px);
   box-shadow:0 8px 24px rgba(221,80,0,0.4);
+  text-decoration:none !important;
 }
 
 .card-action-secondary{
   display:inline-block;
   padding:14px 24px;
-  background:transparent;
-  color:var(--orange);
-  text-decoration:none;
+  background:var(--bg-card);
+  color:#dd5000 !important;
+  text-decoration:none !important;
   border-radius:10px;
   font-weight:600;
   font-size:15px;
   transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  border:1px solid var(--orange);
+  border:2px solid #dd5000 !important;
+  box-sizing:border-box;
+  width:100%;
 }
 
 .card-action-secondary:hover{
-  background:rgba(221,80,0,0.1);
+  background:rgba(221,80,0,0.15);
   transform:translateY(-2px);
-  box-shadow:0 8px 24px rgba(221,80,0,0.2);
+  box-shadow:0 8px 24px rgba(221,80,0,0.3);
+  text-decoration:none !important;
+}
+
+.card-action-secondary:visited,
+.card-action-secondary:active,
+.card-action-secondary:focus{
+  color:#dd5000 !important;
+  text-decoration:none !important;
 }
 
 @media (min-width:640px){
