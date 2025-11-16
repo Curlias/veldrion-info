@@ -258,6 +258,25 @@ body{
   box-shadow:0 8px 24px rgba(221,80,0,0.4);
 }
 
+.card-action-secondary{
+  display:inline-block;
+  padding:14px 24px;
+  background:transparent;
+  color:var(--orange);
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:600;
+  font-size:15px;
+  transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border:1px solid var(--orange);
+}
+
+.card-action-secondary:hover{
+  background:rgba(221,80,0,0.1);
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(221,80,0,0.2);
+}
+
 @media (min-width:640px){
   body{
     padding:48px 24px;
