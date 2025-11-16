@@ -50,11 +50,11 @@ body{
 }
 
 .brand-veldrion{
-  color:#dd5000;
+  color:#dd5000 !important;
 }
 
 .brand-com{
-  color:#ffffff;
+  color:#ffffff !important;
 }
 
 .brand .tag{
