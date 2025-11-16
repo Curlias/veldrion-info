@@ -27,7 +27,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:24px 16px;
+  padding:24px 16px 80px;
   min-height:100vh;
 }
 
@@ -42,10 +42,11 @@ body{
 }
 
 .card-avatar{
-  width:120px;
-  height:120px;
+  width:100px;
+  height:100px;
   border-radius:50%;
   object-fit:cover;
+  object-position:center;
   border:4px solid var(--orange);
   margin:0 auto 20px;
   display:block;
@@ -177,21 +178,23 @@ body{
   text-align:center;
   margin-top:32px;
   padding-top:24px;
+  padding-bottom:40px;
   border-top:1px solid var(--border);
 }
 
 .card-footer-logo{
-  width:48px;
-  height:48px;
+  width:56px;
+  height:56px;
   margin:0 auto 12px;
   display:block;
   border-radius:10px;
-  opacity:0.8;
+  opacity:0.9;
 }
 
 .card-footer-text{
-  font-size:13px;
+  font-size:15px;
   color:var(--text-muted);
+  font-weight:500;
 }
 
 .card-footer-link{
