@@ -201,6 +201,15 @@ body{
   letter-spacing:-0.01em;
 }
 
+.card-footer-brand-link{
+  text-decoration:none;
+  transition:opacity 0.2s;
+}
+
+.card-footer-brand-link:hover{
+  opacity:0.8;
+}
+
 .card-footer-text .brand-veldrion{
   color:#dd5000;
 }
