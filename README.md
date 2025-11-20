@@ -52,4 +52,4 @@ Página estática tipo "link-in-bio" para **Veldrion** — Servicios y Consultor
 
 ## Licencia
 
-Contenido de ejemplo. Sustituir con material oficial de Veldrion antes de publicar.
+Veldrion® 2025 
